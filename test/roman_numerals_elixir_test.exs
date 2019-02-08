@@ -1,17 +1,14 @@
 defmodule RomanNumeralsElixirTest do
   use ExUnit.Case
+  import Checkov
   doctest RomanNumeralsElixir
 
-  test "I converts to 1" do
-    assert RomanNumeralsElixir.convert("I") == 1
-  end
+  data_test "\#{letters} converts to \#{expected}" do
+    assert RomanNumeralsElixir.convert(letters) == expected
+    
+    where letters:  ["I", "V", "X"],
+          expected: [1,5,10]
 
-  test "V converts to 5" do
-    assert RomanNumeralsElixir.convert("V") == 5
-  end
-
-  test "X converts to 10" do
-    assert RomanNumeralsElixir.convert("X") == 10
   end
 
 end
