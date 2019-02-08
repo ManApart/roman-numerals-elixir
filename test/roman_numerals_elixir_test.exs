@@ -16,5 +16,12 @@ defmodule RomanNumeralsElixirTest do
     assert RomanNumeralsElixir.convert(2) == "II"
   end
 
+  data_test "9s #{number} convert to #{expected}" do
+    assert RomanNumeralsElixir.convert(number) == expected
 
+    where(
+      number: [4, 9, 40, 90],
+      expected: ["IV", "IX", "XL", "XC"]
+    )
+  end
 end
