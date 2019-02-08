@@ -10,4 +10,8 @@ defmodule RomanNumeralsElixirTest do
     assert RomanNumeralsElixir.convert("V") == 5
   end
 
+  test "X converts to 10" do
+    assert RomanNumeralsElixir.convert("X") == 10
+  end
+
 end
