@@ -1,6 +1,9 @@
 defmodule RomanNumeralsElixir do
 
   def convert(number) do
-    1
+    case number do
+      "I" -> 1
+      "V" -> 5
+    end
   end
 end
