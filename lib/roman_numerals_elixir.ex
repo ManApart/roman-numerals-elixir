@@ -1,6 +1,8 @@
 defmodule RomanNumeralsElixir do
   def convert(number, letters \\ "") do
     cond do
+      number >= 1000 -> convert(number - 1000, letters <> "M")
+      number >= 500 -> convert(number - 500, letters <> "D")
       number >= 100 -> convert(number - 100, letters <> "C")
       number >= 90 -> convert(number - 90, letters <> "XC")
       number >= 50 -> convert(number - 50, letters <> "L")

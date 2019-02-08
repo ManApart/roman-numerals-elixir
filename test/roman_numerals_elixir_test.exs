@@ -7,8 +7,8 @@ defmodule RomanNumeralsElixirTest do
     assert RomanNumeralsElixir.convert(number) == expected
 
     where(
-      number: [1, 5, 10, 50, 100],
-      expected: ["I", "V", "X", "L", "C"]
+      number: [1, 5, 10, 50, 100, 500, 1000],
+      expected: ["I", "V", "X", "L", "C", "D", "M"]
     )
   end
 
