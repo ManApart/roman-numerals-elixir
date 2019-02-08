@@ -12,5 +12,9 @@ defmodule RomanNumeralsElixirTest do
     )
   end
 
+  test "II converts to 2" do
+    assert RomanNumeralsElixir.convert(2) == "II"
+  end
+
 
 end
