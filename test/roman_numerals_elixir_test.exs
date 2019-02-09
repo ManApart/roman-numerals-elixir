@@ -20,8 +20,8 @@ defmodule RomanNumeralsElixirTest do
     assert RomanNumeralsElixir.convert(number) == expected
 
     where(
-      number: [4, 9, 40, 90],
-      expected: ["IV", "IX", "XL", "XC"]
+      number: [4, 9, 40, 49, 54, 90, 99],
+      expected: ["IV", "IX", "XL", "XLIX", "LIV", "XC", "XCIX"]
     )
   end
 end
