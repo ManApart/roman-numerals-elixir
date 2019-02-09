@@ -6,10 +6,16 @@ defmodule RomanNumeralsElixirTest do
   data_test "#{number} converts to #{expected}" do
     assert RomanNumeralsElixir.convert(number) == expected
 
-    where(
-      number: [1, 5, 10, 50, 100, 500, 1000],
-      expected: ["I", "V", "X", "L", "C", "D", "M"]
-    )
+    where([
+      [:number, :expected],
+      [1, "I"],
+      [5, "V"],
+      [10, "X"],
+      [50, "L"],
+      [100, "C"],
+      [500, "D"],
+      [1000, "M"]
+    ])
   end
 
   test "II converts to 2" do
@@ -19,9 +25,15 @@ defmodule RomanNumeralsElixirTest do
   data_test "9s #{number} convert to #{expected}" do
     assert RomanNumeralsElixir.convert(number) == expected
 
-    where(
-      number: [4, 9, 40, 49, 54, 90, 99],
-      expected: ["IV", "IX", "XL", "XLIX", "LIV", "XC", "XCIX"]
-    )
+    where([
+      [:number, :expected],
+      [4, "IV"],
+      [9, "IX"],
+      [40, "XL"],
+      [49, "XLIX"],
+      [54, "LIV"],
+      [90, "XC"],
+      [99, "XCIX"]
+    ])
   end
 end
