@@ -21,8 +21,8 @@ defmodule RomanNumeralsElixir do
   defp reduce_thing(_, {0, letters}), do: {0, letters}
 
   defp reduce_thing({numeralValue, numeralSign}, {number, letters}) do
-    valueOfSymbol = div(number, numeralValue)
+    numberOfSymbol = div(number, numeralValue)
     remainingValue = rem(number, numeralValue)
-    {remainingValue, letters <> String.duplicate(numeralSign, valueOfSymbol)}
+    {remainingValue, letters <> String.duplicate(numeralSign, numberOfSymbol)}
   end
 end
