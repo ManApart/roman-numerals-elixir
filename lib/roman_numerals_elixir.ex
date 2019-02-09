@@ -1,6 +1,5 @@
 defmodule RomanNumeralsElixir do
   def convert(number, letters \\ "") do
-    # letters = convert_letters(rawLetters)
 
     cond do
       number >= 1000 -> convert(number - 1000, letters <> "M")
