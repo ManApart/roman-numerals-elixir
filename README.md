@@ -1,6 +1,6 @@
 # RomanNumeralsElixir
 
-Based on the [Roman Numerals Kata](https://github.com/PillarTechnology/kata-roman-numeral-calculator)
+Based on the [Roman Numerals Kata](https://github.com/PillarTechnology/kata-roman-numeral-calculator) which is based on [Roman Numerals Kata](https://codingdojo.org/kata/RomanCalculator/)
 
 ## Installation
 
